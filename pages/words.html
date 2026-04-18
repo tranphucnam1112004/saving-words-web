@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách từ</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="subpage-wrapper">
+      <!-- header  -->
+      <div class="page-header">
+        <div class="page-header-top">
+          <h2>Danh sách từ</h2>
+          <button class="btn-add" id="btn-add-word">+ Thêm từ</button>
+        </div>
+        <div class="toolbar-wrapper">
+          <div class="toolbar-row">
+            <input
+              class="toolbar-search"
+              type="search"
+              id="word-search"
+              placeholder="Tìm từ..."
+            />
+          </div>
+          <div class="toolbar-row">
+            <span class="sort-label">Sắp xếp:</span>
+            <button class="sort-btn active" data-sort="alpha">A–Z</button>
+            <button class="sort-btn" data-sort="group">Nhóm</button>
+            <button class="sort-btn" data-sort="date">Ngày thêm</button>
+            <select class="select-dropdown" id="sort-dir">
+              <option value="asc">Tăng dần</option>
+              <option value="desc">Giảm dần</option>
+            </select>
+            <select
+              class="select-dropdown"
+              id="group-filter"
+            >
+              <option value="">Tất cả nhóm</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="word-table" id="word-table"></div>
+      </div>
+    </div>
+    <!-- form thêm từ ------------------------------------------------- -->
+    <form class="form-popup" id="form-word">
+      <div class="form-popup-wrapper">
+        <h3 id="form-word-title">Thêm từ mới</h3>
+        <div class="form-field">
+          <label for="input-word">Từ</label>
+          <input type="text" id="input-word" placeholder="Nhập từ..." />
+        </div>
+        <div class="form-field">
+          <label for="input-meaning">Nghĩa</label>
+          <input type="text" id="input-meaning" placeholder="Nghĩa của từ..." />
+        </div>
+        <div class="form-field">
+          <label for="input-group">Nhóm</label>
+          <select id="input-group"></select>
+        </div>
+        <div class="form-field">
+          <label for="input-note">Ghi chú</label>
+          <textarea
+            id="input-note"
+            placeholder="Ví dụ, ghi chú thêm..."
+          ></textarea>
+        </div>
+        <div class="form-action">
+          <button class="btn-cancel" id="btn-cancel-word">Hủy</button>
+          <button class="btn-save" id="btn-save-word">Lưu từ</button>
+        </div>
+      </div>
+    </form>
+    <!-- form sửa từ ------------------------------------------------------ -->
+    <form class="form-popup" id="form-edit-word">
+      <div class="form-popup-wrapper">
+        <h3>Sửa từ</h3>
+        <div class="form-field">
+          <label for="edit-word">Từ</label>
+          <input type="text" id="edit-word" placeholder="Nhập từ..." />
+        </div>
+        <div class="form-field">
+          <label for="edit-meaning">Nghĩa</label>
+          <input type="text" id="edit-meaning" placeholder="Nghĩa của từ..." />
+        </div>
+        <div class="form-field">
+          <label for="edit-group">Nhóm</label>
+          <select id="edit-group"></select>
+        </div>
+        <div class="form-field">
+          <label for="edit-note">Ghi chú</label>
+          <textarea
+            id="edit-note"
+            placeholder="Ví dụ, ghi chú thêm..."
+          ></textarea>
+        </div>
+        <div class="form-action">
+          <button class="btn-cancel" id="btn-cancel-edit-word">Hủy</button>
+          <button class="btn-save" id="btn-save-edit-word">Lưu thay đổi</button>
+        </div>
+      </div>
+    </form>
+    <!-- xác nhận xóa từ ----------------------------------------------------- -->
+    <div class="form-popup" id="confirm-del-word">
+      <div class="form-popup-wrapper form-confirm">
+        <h3>Xóa từ</h3>
+        <p>Bạn có chắc muốn xóa từ <strong id="delete-word-name"></strong>?</p>
+        <p class="del-warning">Hành động này không thể hoàn tác.</p>
+        <div class="form-action">
+          <button class="btn-cancel" id="btn-cancel-delete-word">Hủy</button>
+          <button class="btn-delete" id="btn-confirm-delete-word">Xóa</button>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/script/auth.js"></script>
+    <script src="../assets/script/script.js"></script>
+    <script src="../assets/script/words.js"></script>
+  </body>
+</html>

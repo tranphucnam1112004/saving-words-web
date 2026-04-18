@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ôn từ</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+  <body>
+    <!-- Giao diện chọn từ cần ôn ------------------------------------------------------ -->
+    <div id="select-word-view">
+      <div class="page-header page-header-select">
+        <h2>Ôn từ</h2>
+        <div class="toolbar-wrapper">
+          <div class="toolbar-row">
+            <input
+              class="toolbar-search"
+              type="search"
+              id="review-search"
+              placeholder="Tìm từ..."
+            />
+          </div>
+          <div class="toolbar-row">
+            <span class="sort-label">Sắp xếp:</span>
+            <button class="sort-btn active" data-rsort="alpha">A–Z</button>
+            <button class="sort-btn" data-rsort="group">Nhóm</button>
+            <button class="sort-btn" data-rsort="date">Ngày thêm</button>
+            <select class="select-dropdown" id="review-sort-dir">
+              <option value="asc">Tăng dần</option>
+              <option value="desc">Giảm dần</option>
+            </select>
+            <select class="select-dropdown" id="review-group-filter">
+              <option value="">Tất cả nhóm</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="review-bar">
+        <input
+          type="checkbox"
+          id="check-all"
+        />
+        <label for="check-all">Chọn tất cả</label>
+        <span id="selected-count"></span>
+        <button class="btn-start" id="btn-start-review" disabled>
+          Bắt đầu ôn
+        </button>
+      </div>
+      <div class="page-content page-content-scroll">
+        <div class="word-table" id="review-table"></div>
+      </div>
+    </div>
+    <!-- Giao diện ôn từ flashcard ----------------------------------------------------- -->
+    <div id="review-view">
+      <div class="page-header page-header-review">
+        <h2>Đang ôn từ</h2>
+        <button class="btn-exit" id="btn-exit-review">← Thoát</button>
+      </div>
+      <div class="review-mode">
+        <div class="card-counter" id="card-counter"></div>
+        <div class="flashcard" id="flashcard">
+          <div class="fc-word" id="fc-word"></div>
+          <div class="fc-meaning" id="fc-meaning"></div>
+          <div class="reveal">Click để xem nghĩa</div>
+        </div>
+        <div class="nav-btns">
+          <button class="nav-btn" id="btn-prev">← Trước</button>
+          <button class="nav-btn" id="btn-next">Tiếp →</button>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/script/auth.js"></script>
+    <script src="../assets/script/script.js"></script>
+    <script src="../assets/script/review.js"></script>
+  </body>
+</html>

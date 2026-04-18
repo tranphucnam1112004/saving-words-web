@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách nhóm</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="subpage-wrapper">
+      <div class="page-header">
+        <div class="page-header-top">
+          <h2>Danh sách nhóm</h2>
+          <button class="btn-add" id="btn-add-group">+ Thêm nhóm</button>
+        </div>
+        <div class="toolbar-wrapper">
+          <div class="toolbar-row">
+            <input
+              type="search"
+              class="toolbar-search"
+              id="group-search"
+              placeholder="Nhập tên nhóm cần tìm"
+            />
+          </div>
+          <div class="toolbar-row">
+            <span class="sort-label">Sắp xếp:</span>
+            <button class="sort-btn active" group-sort="alpha">A–Z</button>
+            <button class="sort-btn" group-sort="date">Ngày thêm</button>
+            <select class="select-dropdown" id="group-sort-dir">
+              <option value="asc">Tăng dần</option>
+              <option value="desc">Giảm dần</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="page-content page-content-groups">
+        <div class="group-table" id="group-table"></div>
+      </div>
+    </div>
+    <!-- form thêm nhóm từ -------------------------------------------------------------- -->
+    <form class="form-popup" id="form-input">
+      <div class="form-popup-wrapper">
+        <h3>Thêm nhóm mới</h3>
+        <div class="form-field">
+          <label for="input-group-name">Tên nhóm</label>
+          <input
+            type="text"
+            id="input-group-name"
+            placeholder="Nhập tên nhóm"
+          />
+        </div>
+        <div class="form-field">
+          <label for="input-group-describe">Mô tả</label>
+          <textarea
+            id="input-group-describe"
+            placeholder="Nhập mô tả nhóm"
+          ></textarea>
+        </div>
+        <div class="form-action">
+          <button class="btn-cancel" id="btn-cancel-group">Hủy</button>
+          <button class="btn-save" id="btn-save-group">Lưu nhóm</button>
+        </div>
+      </div>
+    </form>
+    <!-- form sửa nhóm từ ----------------------------------------------------------------- -->
+    <form class="form-popup" id="modal-edit-group">
+      <div class="form-popup-wrapper">
+        <h3>Sửa nhóm</h3>
+        <div class="form-field">
+          <label for="edit-group-name">Tên nhóm</label>
+          <input type="text" id="edit-group-name" placeholder="Nhập tên nhóm" />
+        </div>
+        <div class="form-field">
+          <label for="edit-group-describe">Mô tả</label>
+          <textarea
+            id="edit-group-describe"
+            placeholder="Nhập mô tả nhóm"
+          ></textarea>
+        </div>
+        <div class="form-action">
+          <button class="btn-cancel" id="btn-cancel-edit-group">Hủy</button>
+          <button class="btn-save" id="btn-save-edit-group">Lưu</button>
+        </div>
+      </div>
+    </form>
+    <!-- Xác nhận xóa nhóm ------------------------------------------------------------ -->
+    <div class="form-popup" id="confirm-del-group">
+      <div class="form-popup-wrapper form-confirm">
+        <h3>Xóa nhóm</h3>
+        <p>Bạn có chắc muốn xóa nhóm <b id="delete-group-name"></b>?</p>
+        <div class="form-action">
+          <button class="btn-cancel" id="btn-cancel-delete-group">Hủy</button>
+          <button class="btn-delete" id="btn-confirm-delete-group">Xóa</button>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/script/auth.js"></script>
+    <script src="../assets/script/script.js"></script>
+    <script src="../assets/script/groups.js"></script>
+  </body>
+</html>

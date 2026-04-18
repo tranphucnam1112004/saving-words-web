@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WordList — Đăng nhập</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style_login_regis.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- left ----------------------------------------- -->
+      <div class="left">
+        <img src="assets/WL.png" alt="WordList logo" />
+      </div>
+      <!-- right ------------------------------------------- -->
+      <div class="right">
+        <form action="" class="input-form" id="login-form">
+          <div class="msg error" id="error-msg"></div>
+          <div class="input">
+            <i class="fa-solid fa-user"></i>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Nhập tên đăng nhập"
+              required
+              autocomplete="username"
+            />
+          </div>
+          <div class="input">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Nhập mật khẩu"
+              required
+              autocomplete="new-password"
+            />
+          </div>
+        </form>
+        <div class="direct-btn">
+          <button class="sub-btn">
+            Bạn chưa có tài khoản?<br />
+            <a href="regis.html">Đăng ký ngay</a>
+          </button>
+          <button class="main-btn" id="btn-login">Đăng nhập</button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/script/auth.js"></script>
+    <script src="assets/script/login.js"></script>
+  </body>
+</html>

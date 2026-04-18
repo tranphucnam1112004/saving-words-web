@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Từ vựng — Học từ mỗi ngày</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <!-- sidebar -------------------------------------------------- -->
+      <div class="sidebar" id="sidebar">
+        <div class="web-logo">
+          <img src="assets/WL.png" alt="WordList logo" />
+        </div>
+        <div>
+          <div class="nav-item active" data-page="overview">
+            <i class="fa-solid fa-table-cells-large nav-icon"></i>
+            Tổng quan
+          </div>
+          <div class="nav-item" data-page="words">
+            <i class="fa-solid fa-book-open nav-icon"></i>
+            Danh sách từ
+          </div>
+          <div class="nav-item" data-page="groups">
+            <i class="fa-solid fa-layer-group nav-icon"></i>
+            Danh sách nhóm
+          </div>
+          <div class="nav-item" data-page="review">
+            <i class="fa-solid fa-clock-rotate-left nav-icon"></i>
+            Ôn từ
+          </div>
+        </div>
+        <!-- user ---------------------------------------------------- -->
+        <div class="user-bottom-sidebar">
+          <div class="user-bottom-sidebar-label">Xin chào</div>
+          <div class="user-bottom-sidebar-name" id="sidebar-username"></div>
+          <button class="btn-logout" id="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>Đăng xuất
+          </button>
+        </div>
+      </div>
+
+      <!-- lớp phủ khi mở menu cho mobile------------------------------ -->
+      <div class="sub-layer" id="sub-layer"></div>
+      <!-- main -------------------------------------------------------- -->
+      <div class="main">
+        <!-- topbar đieucho mobile ----------------------------------------- -->
+        <div class="topbar" id="topbar">
+          <button class="menu-mobile" id="menu-mobile">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <h2 id="topbar-title">Tổng quan</h2>
+        </div>
+        <!-- iframe để load content --------------------------------------- -->
+        <iframe
+          class="content-frame"
+          id="content-frame"
+          title="Nội dung trang"
+          src="pages/overview.html"
+        ></iframe>
+      </div>
+    </div>
+    <script src="assets/script/auth.js"></script>
+    <script src="assets/script/script.js"></script>
+  </body>
+</html>
