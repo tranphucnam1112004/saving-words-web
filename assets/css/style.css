@@ -15,33 +15,7 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-@media (max-width: 600px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    transform: translateX(-100%);
-  }
-  .sidebar.open {
-    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.25);
-    transform: translateX(0);
-  }
-  .topbar {
-    display: flex;
-  }
-  .bottom-nav {
-    display: block;
-  }
-  .page-header h2 {
-    display: none;
-  }
-  .word-row .d,
-  .group-row .group-date,
-  .date-ten-words {
-    display: none;
-  }
-}
+
 .app {
   position: relative;
   display: flex;
@@ -936,4 +910,31 @@ body {
 
 .btn-delete:hover {
   background: #962d22;
+}
+@media (max-width: 600px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.25);
+    transform: translateX(0);
+  }
+  .topbar {
+    display: flex;
+  }
+  .bottom-nav {
+    display: block;
+  }
+  .page-header h2 {
+    display: none;
+  }
+  .word-row .d,
+  .group-row .group-date,
+  .date-ten-words {
+    display: none;
+  }
 }

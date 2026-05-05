@@ -154,4 +154,5 @@ window.AppNav = {
     window.AppNav.navigate("overview");
   },
 };
+
 document.addEventListener("DOMContentLoaded", () => window.AppNav.init());
